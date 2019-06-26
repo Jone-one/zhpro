@@ -25,7 +25,6 @@ public class ShiroConfig {
         //没有权限跳转的页面
         bean.setUnauthorizedUrl("/index");
 
-
         return bean;
     }
 
