@@ -1,0 +1,20 @@
+spring:
+  thymeleaf:
+    mode: LELEGACYHTML5
+    cache: false
+  datasource:
+    url: jdbc:mysql://localhost:3306/zhpro??useUnicode=true&characterEncoding=utf8&useSSL=false
+    driverClassName: com.mysql.jdbc.Driver
+    username: root
+    password: 123456
+logging:
+  config: classpath:config/logback-spring.xml
+mybatis:
+  #设置实体类路径
+  type-aliases-package: com.lyi.zhpro.*.vo
+  #映射文件路径
+  mapper-locations: mybatis/**/*Mapper.xml
+  #开启驼峰寺
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
